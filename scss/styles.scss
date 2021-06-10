@@ -1,0 +1,20 @@
+// Imports! Bring all the other styles together.
+// Be careful of the order! Put definitions first!!
+
+// Reset file
+@import 'reset';
+
+// Useful mixins
+@mixin flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+// Imports from other files
+@import 'typography';
+@import 'colors';
+@import 'layout';
+@import 'forms';
+@import 'cart';
