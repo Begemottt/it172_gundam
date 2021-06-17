@@ -10,6 +10,16 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.js$/, // Look for any file with a .js extension
+                exclude: /node_modules/, // Ignore node_modules! Don't want to drawn in EVERYTHING when you don't need it
+                use: { // Tells it how to handle the files
+                    loader: "babel-loader",
+                    options: {
+                        presets: ["@babel/preset-env", "@babel/preset-react"]
+                    }
+                }
+            },
+            {
                 
                 test: /\.s[ac]ss$/i,
                 exclude: /node_modules/,
